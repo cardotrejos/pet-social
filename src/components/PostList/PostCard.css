@@ -1,0 +1,17 @@
+.card {
+  height: 100%;
+  margin-bottom: 0%;
+}
+
+.date {
+  text-align: left;
+  margin-left: 30%;
+}
+
+.seeMore {
+  margin-bottom: 5%;
+}
+
+.hashTag {
+  cursor: pointer;
+}
