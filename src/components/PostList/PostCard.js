@@ -17,11 +17,12 @@ const PostCard = ({ post }) => {
   const handleShow = (event) => {
     setShow(true);
   }
-
   console.log(id)
 
-  const {user} = useGetUser(id)
-
+  const { user } = useGetUser(id)
+  
+  console.log(user)
+  
   const author = `${post.owner.firstName} ${post.owner.lastName}`
 
   const date = dayjs(post.publishDate).format("DD-MM-YYYY")
@@ -43,7 +44,7 @@ const PostCard = ({ post }) => {
         </Modal.Header>
         <Modal.Body>
           <img className="avatar" variant="top" src={post.owner.picture} alt="avatar"></img>
-          <br/>
+          <br />
           <h6><span className="bold">Email: </span> {post.owner.email}</h6>
         </Modal.Body>
         <Modal.Footer>
@@ -56,7 +57,7 @@ const PostCard = ({ post }) => {
       <Col md={3} style={{ 'marginBottom': '2%' }}>
         <Card className="card">
           <Card.Header>
-            <Button onClick={() => {setId(post.owner.id); handleShow()}} variant="link">{author}</Button>
+            <Button onClick={() => { setId(post.owner.id); handleShow() }} variant="link">{author}</Button>
           </Card.Header>
           <Card.Img variant="top" src={post.image} />
           <Card.Body>
