@@ -14,7 +14,7 @@ export default function useGetPosts(pageNumber) {
     axios({
       method: "GET",
       url: "https://dummyapi.io/data/api/post",
-      headers: { 'app-id': '5f4599ce1ba62700027135eb' },
+      headers: { 'app-id': '5f469779007a770002d64f1b' },
       params: { page: pageNumber },
       cancelToken: new axios.CancelToken(c => cancel = c),
     }).then(res => {
